@@ -3,13 +3,18 @@ mkd2
 
 Yet another build automation utility.
 
-```shell
-# Installation for macOS/Linux
-gcc main.c -o mkd2
-sudo cp mkd2 '/somewhere/in/your/$PATH'
-```
+System requirement
+------------------
 
-```batch
-rem Installation for Windows
-cl main.c /Femkd2.exe
-```
+Win32 or POSIX.
+
+Installation
+------------
+
+1. Compile main.c. Any of these works:
+	```shell
+	gcc main.c -o mkd2
+	clang main.c -o mkd2
+	cl main.c /Femkd2.exe
+	```
+2. Move mkd2(.exe) to somewhere in your $PATH (%PATH%).
