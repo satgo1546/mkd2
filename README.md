@@ -5,8 +5,8 @@ mkd2
 
 Yet another build automation utility.
 
-System requirement
-------------------
+System requirements
+-------------------
 
 Win32 or POSIX.
 
