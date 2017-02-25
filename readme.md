@@ -1,7 +1,7 @@
 mkd2
 ====
 
-Yet another build automation utility.
+Yet another build automation utility. **[WIP]**
 
 System requirement
 ------------------
