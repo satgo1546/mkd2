@@ -1,0 +1,5 @@
+# .gitignore
+*.exe
+*.out
+*.obj
+mkd2
