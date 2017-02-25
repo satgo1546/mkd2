@@ -26,13 +26,15 @@ const char* dir_entry(type_dir* dir) {
 	}
 	dir->first = false;
 	// ignore . and ..
-	const char* name = dir->ffd.cFileName;
-	if (name[0] == '.') {
-		if (name[1] == '.' && name[2] == 0 || name[1] == 0) {
-			return dir_entry(dir);
+	{
+		const char* name = dir->ffd.cFileName;
+		if (name[0] == '.') {
+			if (name[1] == '.' && name[2] == 0 || name[1] == 0) {
+				return dir_entry(dir);
+			}
 		}
+		return name;
 	}
-	return name;
 }
 
 void dir_close(type_dir* dir) {
