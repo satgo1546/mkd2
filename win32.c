@@ -28,11 +28,7 @@ const char* dir_entry(type_dir* dir) {
 	// ignore . and ..
 	{
 		const char* name = dir->ffd.cFileName;
-		if (name[0] == '.') {
-			if (name[1] == '.' && name[2] == 0 || name[1] == 0) {
-				return dir_entry(dir);
-			}
-		}
+		if (!fncheck(name)) return dir_entry(dir);
 		return name;
 	}
 }
