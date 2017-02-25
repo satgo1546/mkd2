@@ -44,3 +44,29 @@ void dir_close(type_dir* dir) {
 	closedir(dir->dir);
 	free(dir);
 }
+
+void set_color(int fg, int bg) {
+	char sequence[13] = "\e[0;";
+	char* p = sequence + 4;
+	if (fg > 0 && fg & 8) {
+		*p++ = '1';
+		*p++ = ';';
+	}
+	if (fg > 0) {
+		*p++ = '3';
+		*p++ = '0' + (fg & 7);
+		*p++ = ';';
+	}
+	if (bg > 0) {
+		*p++ = '4';
+		*p++ = '0' + (bg & 7);
+		*p++ = ';';
+	}
+	*p-- = 0;
+	*p = 'm';
+	fputs(sequence, stdout);
+}
+
+void reset_color() {
+	printf("\e[0m");
+}

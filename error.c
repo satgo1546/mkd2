@@ -7,9 +7,12 @@
 void error(const char* function, const char* format, ...) {
 	va_list ap;
 	va_start(ap, format);
-	fprintf(stderr, "= Error =\nMessage: ");
-	vfprintf(stderr, format, ap);
-	fputc('\n', stderr);
+	set_color(15, 1);
+	fputs(" Error ", stdout);
+	reset_color();
+	fputs("\nMessage: ", stdout);
+	vprintf(format, ap);
+	putchar('\n');
 	if (function && *function) perror(function);
 	va_end(ap);
 	exit(EXIT_FAILURE);

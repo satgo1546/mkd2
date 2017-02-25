@@ -15,7 +15,6 @@
 #endif
 
 /* utilities */
-#include "error.c"
 #include "fncheck.c"
 
 /* platform */
@@ -26,6 +25,7 @@
 #endif
 
 /* definition */
+#include "error.c"
 #include "read_config.c"
 #include "invoke.c"
 
