@@ -9,6 +9,9 @@ typedef struct {
 	char glob_base[FILENAME_MAX];
 } type_dir;
 
+void platform_init() {
+}
+
 type_dir* dir_open(const char* glob) {
 	char* glob_dir = strdup(glob);
 	char* glob_base_ = strdup(glob);
