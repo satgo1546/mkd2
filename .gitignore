@@ -2,4 +2,5 @@
 *.exe
 *.out
 *.obj
+.stackdump
 mkd2
