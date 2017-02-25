@@ -4,8 +4,10 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdarg.h>
 
 /* definition */
+#include "error.c"
 #include "read_config.c"
 #include "invoke.c"
 
@@ -15,5 +17,5 @@ int main(int argc, char* argv[]) {
 	for (int i = 1; i < argc; i++) {
 		invoke(argv[i]);
 	}
-	return 0;
+	return EXIT_SUCCESS;
 }
