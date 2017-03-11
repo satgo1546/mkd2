@@ -1,5 +1,6 @@
 # .gitignore
 *.exe
+*.dll
 *.out
 *.obj
 .stackdump
